@@ -39,14 +39,13 @@ plt.axis([0, 800, 0, 10])
 x = 0.027
 y = -2.35
 
-x = np.linspace(0, 800, 800)
-y1 = 0.027 * x - 2.35
-y2 = 0.027 * x + 0.71
+x = np.linspace(0, 800, 1600)
+y1 = 0.0164 * x - 5.41
+y2 = 0.0164 * x + 5.08
 
-plt.plot(x, y1, label='y = 0.027 * x - 2.35')
-plt.plot(x, y2, label='y = 0.027 * x + 0.71')
+plt.plot(x, y1)
+plt.plot(x, y2)
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Графики функций')
 plt.legend()
 plt.show()
