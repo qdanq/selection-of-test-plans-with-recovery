@@ -35,6 +35,18 @@ non_conformity = non_conformity_area()
 
 
 plt.axis([0, 800, 0, 10])
-plt.plot()
 
+x = 0.027
+y = -2.35
+
+x = np.linspace(0, 800, 800)
+y1 = 0.027 * x - 2.35
+y2 = 0.027 * x + 0.71
+
+plt.plot(x, y1, label='y = 0.027 * x - 2.35')
+plt.plot(x, y2, label='y = 0.027 * x + 0.71')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Графики функций')
+plt.legend()
 plt.show()
