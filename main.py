@@ -35,13 +35,34 @@ non_conformity = non_conformity_area()
 
 plt.axis([0, 800, 0, 10])
 
-x = np.linspace(0, 800)
-y1 = conformity[0] * x + conformity[1]
-y2 = non_conformity[0] * x + non_conformity[1]
+t = np.linspace(0, 800)
+y1 = conformity[0] * t + conformity[1]
+y2 = non_conformity[0] * t + non_conformity[1]
 
-plt.plot(x, y1)
-plt.plot(x, y2)
-plt.xlabel('x')
-plt.ylabel('y')
+plt.plot(t, y1)
+plt.plot(t, y2)
+plt.grid(True)
+plt.xlabel('t')
+plt.ylabel('X(t)')
 plt.legend()
 plt.show()
+
+#plt.style.use('_mpl-gallery')
+
+# make data
+
+#x_t = np.linspace(0, 10)
+
+#y = [4.8, 5.5, 3.5, 4.6, 6.5, 6.6, 2.6, 3.0]
+
+#fig, ax = plt.subplots()
+
+#ax.stairs(y, linewidth=2.5)
+
+#ax.set(xlim=(0, 8), xticks=np.arange(1, 8),
+      # ylim=(0, 8), yticks=np.arange(1, 8))
+
+#plt.show()
+
+
+
