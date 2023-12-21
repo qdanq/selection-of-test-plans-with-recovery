@@ -33,30 +33,18 @@ conformity = conformity_area()
 non_conformity = non_conformity_area()
 
 
-plt.figure
-
 plt.axis([0, 800, 0, 10])
 
-t = np.linspace(0, 800)
-y1 = conformity[0] * t + conformity[1]
-y2 = non_conformity[0] * t + non_conformity[1]
+t = np.linspace(0, 800) # Тут можно косарь поставить для наглядности, если это работает так как я дума.
+x_t = np.linspace(0, 10)
+k1 = conformity[0] * t + conformity[1]
+k2 = non_conformity[0] * t + non_conformity[1]
 
-plt.plot(t, y1)
-plt.plot(t, y2)
+plt.plot(t, k1, 'r', label = str(round(conformity[0], 4)) + ' * ' + 't ' + ' + ' + str(round(conformity[1], 4)))
+plt.plot(t, k2, 'g', label = str(round(non_conformity[0], 4)) + ' * ' + 't ' + ' + ' + str(round(non_conformity[1], 4)))
+#plt.plot(t, x_t)   # это то что является ступеньчатим на том графике
 plt.grid(True)
 plt.xlabel('t')
 plt.ylabel('X(t)')
 plt.legend()
-
-plt.style.use('_mpl-gallery')
-x_t = np.linspace(0, 10)
-
-fig, ax = plt.subplots()
-
-ax.stairs(x_t, linewidth=2.5)
-
-ax.set(xlim=(0, 800), xticks=np.arange(0, 80),
-       ylim=(0, 10), yticks=np.arange(0, 10))
-
 plt.show()
-
