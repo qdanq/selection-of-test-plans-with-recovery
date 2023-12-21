@@ -1,7 +1,7 @@
 #import matplotlib.pyplot as plt
 import math
 
-def conformity_area(r, a, b, t_0):
+def conformity_area():
 
     ln = math.log(b * (1 - a)**-1)
 
@@ -11,8 +11,11 @@ def conformity_area(r, a, b, t_0):
     k_lower = str(k) + " t " + str(k_1) 
     return k_lower
 
-def non_conformity_area(r, a, b, t_0):
-    ln = math.log(a)
+def non_conformity_area():
+    A = 2.062 
+    k = (n * (r - 1)) / (t_0 * math.log(r))
+    k_1 = A / math.log(r)
+    return str(k) + " t " + str(k_1)
 
 r = 1.5 # 1.5
 a = 0.1 # 0.05
@@ -26,9 +29,9 @@ h_1 = 24.43 # 36.74
 M_T0 = (h_0 * t_0) / n
 M_T1 = (h_1 * t_1) / n
 
-conformity = conformity_area(r, a, b, t_0)
+conformity = conformity_area()
 
-non_conformity = non_conformity_area(r, a, b, t_0)
+non_conformity = non_conformity_area()
 
 
 
