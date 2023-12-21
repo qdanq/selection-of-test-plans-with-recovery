@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import math
 
 def conformity_area():
@@ -30,8 +31,10 @@ M_T0 = (h_0 * t_0) / n
 M_T1 = (h_1 * t_1) / n
 
 conformity = conformity_area()
-
 non_conformity = non_conformity_area()
 
 
+plt.axis([0, 800, 0, 10])
+plt.plot()
 
+plt.show()
