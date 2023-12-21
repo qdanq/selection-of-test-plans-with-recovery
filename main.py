@@ -1,4 +1,5 @@
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+import math
 
 r = 1.5 # 1.5
 a = 0.1 # 0.05
@@ -12,5 +13,6 @@ h_1 = 24.43 # 36.74
 M_T0 = (h_0 * t_0) / n
 M_T1 = (h_1 * t_1) / n
 
-print(M_T1)
+ln = math.log(b * (1 - a)**-1)
 
+k = (n * (r - 1)) / (t_0 * math.log(r))
